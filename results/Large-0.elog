@@ -1,0 +1,827 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1030 rid Large-0-20150623-15:37:29-2633 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t HTTPNet n HTTPNet cm 1
+MS id 1 d bgb=546,418
+MC id 2 c HTTPServer t HTTPServer pid 1 n server
+MS id 2 d p=75,45;i=device/server
+GC m 2 g 1048576 n voiceFlow$i i 0 o 0
+GC m 2 g 1572864 n voiceFlow$o i 0 o 1
+MC id 3 c Cloud t Cloud pid 1 n cloud
+MS id 3 d p=148,158;i=misc/cloud
+GC m 3 g 1048576 n voiceServer$i i 0 o 0
+GC m 3 g 1572864 n voiceServer$o i 0 o 1
+GC m 3 g 2097152 n voicePresenter$i i 0 o 0
+GC m 3 g 2621440 n voicePresenter$o i 0 o 1
+GC m 3 g 3145728 n voiceListeners$i i 0 o 0
+GC m 3 g 3670016 n voiceListeners$o i 0 o 1
+GC m 3 g 3145729 n voiceListeners$i i 1 o 0
+GC m 3 g 3670017 n voiceListeners$o i 1 o 1
+GC m 3 g 3145730 n voiceListeners$i i 2 o 0
+GC m 3 g 3670018 n voiceListeners$o i 2 o 1
+GC m 3 g 3145731 n voiceListeners$i i 3 o 0
+GC m 3 g 3670019 n voiceListeners$o i 3 o 1
+GC m 3 g 3145732 n voiceListeners$i i 4 o 0
+GC m 3 g 3670020 n voiceListeners$o i 4 o 1
+GC m 3 g 3145733 n voiceListeners$i i 5 o 0
+GC m 3 g 3670021 n voiceListeners$o i 5 o 1
+GC m 3 g 3145734 n voiceListeners$i i 6 o 0
+GC m 3 g 3670022 n voiceListeners$o i 6 o 1
+GC m 3 g 3145735 n voiceListeners$i i 7 o 0
+GC m 3 g 3670023 n voiceListeners$o i 7 o 1
+GC m 3 g 3145736 n voiceListeners$i i 8 o 0
+GC m 3 g 3670024 n voiceListeners$o i 8 o 1
+GC m 3 g 3145737 n voiceListeners$i i 9 o 0
+GC m 3 g 3670025 n voiceListeners$o i 9 o 1
+MC id 4 c HTTPClient t HTTPClient pid 1 n Presenter
+MS id 4 d p=375,29;i=device/pc2
+GC m 4 g 1048576 n voiceUpload$i i 0 o 0
+GC m 4 g 1572864 n voiceUpload$o i 0 o 1
+GC m 4 g 2097152 n voiceP2P$i i 0 o 0
+GC m 4 g 2621440 n voiceP2P$o i 0 o 1
+MC id 5 c HTTPClient t HTTPClient pid 1 n Students[0]
+MS id 5 d p=336,245,col;i=device/pc2
+GC m 5 g 1048576 n voiceUpload$i i 0 o 0
+GC m 5 g 1572864 n voiceUpload$o i 0 o 1
+GC m 5 g 2097152 n voiceP2P$i i 0 o 0
+GC m 5 g 2621440 n voiceP2P$o i 0 o 1
+MC id 6 c HTTPClient t HTTPClient pid 1 n Students[1]
+MS id 6 d p=336,245,col;i=device/pc2
+GC m 6 g 1048576 n voiceUpload$i i 0 o 0
+GC m 6 g 1572864 n voiceUpload$o i 0 o 1
+GC m 6 g 2097152 n voiceP2P$i i 0 o 0
+GC m 6 g 2621440 n voiceP2P$o i 0 o 1
+MC id 7 c HTTPClient t HTTPClient pid 1 n Students[2]
+MS id 7 d p=336,245,col;i=device/pc2
+GC m 7 g 1048576 n voiceUpload$i i 0 o 0
+GC m 7 g 1572864 n voiceUpload$o i 0 o 1
+GC m 7 g 2097152 n voiceP2P$i i 0 o 0
+GC m 7 g 2621440 n voiceP2P$o i 0 o 1
+MC id 8 c HTTPClient t HTTPClient pid 1 n Students[3]
+MS id 8 d p=336,245,col;i=device/pc2
+GC m 8 g 1048576 n voiceUpload$i i 0 o 0
+GC m 8 g 1572864 n voiceUpload$o i 0 o 1
+GC m 8 g 2097152 n voiceP2P$i i 0 o 0
+GC m 8 g 2621440 n voiceP2P$o i 0 o 1
+MC id 9 c HTTPClient t HTTPClient pid 1 n Students[4]
+MS id 9 d p=336,245,col;i=device/pc2
+GC m 9 g 1048576 n voiceUpload$i i 0 o 0
+GC m 9 g 1572864 n voiceUpload$o i 0 o 1
+GC m 9 g 2097152 n voiceP2P$i i 0 o 0
+GC m 9 g 2621440 n voiceP2P$o i 0 o 1
+MC id 10 c HTTPClient t HTTPClient pid 1 n Students[5]
+MS id 10 d p=336,245,col;i=device/pc2
+GC m 10 g 1048576 n voiceUpload$i i 0 o 0
+GC m 10 g 1572864 n voiceUpload$o i 0 o 1
+GC m 10 g 2097152 n voiceP2P$i i 0 o 0
+GC m 10 g 2621440 n voiceP2P$o i 0 o 1
+MC id 11 c HTTPClient t HTTPClient pid 1 n Students[6]
+MS id 11 d p=336,245,col;i=device/pc2
+GC m 11 g 1048576 n voiceUpload$i i 0 o 0
+GC m 11 g 1572864 n voiceUpload$o i 0 o 1
+GC m 11 g 2097152 n voiceP2P$i i 0 o 0
+GC m 11 g 2621440 n voiceP2P$o i 0 o 1
+MC id 12 c HTTPClient t HTTPClient pid 1 n Students[7]
+MS id 12 d p=336,245,col;i=device/pc2
+GC m 12 g 1048576 n voiceUpload$i i 0 o 0
+GC m 12 g 1572864 n voiceUpload$o i 0 o 1
+GC m 12 g 2097152 n voiceP2P$i i 0 o 0
+GC m 12 g 2621440 n voiceP2P$o i 0 o 1
+MC id 13 c HTTPClient t HTTPClient pid 1 n Students[8]
+MS id 13 d p=336,245,col;i=device/pc2
+GC m 13 g 1048576 n voiceUpload$i i 0 o 0
+GC m 13 g 1572864 n voiceUpload$o i 0 o 1
+GC m 13 g 2097152 n voiceP2P$i i 0 o 0
+GC m 13 g 2621440 n voiceP2P$o i 0 o 1
+MC id 14 c HTTPClient t HTTPClient pid 1 n Students[9]
+MS id 14 d p=336,245,col;i=device/pc2
+GC m 14 g 1048576 n voiceUpload$i i 0 o 0
+GC m 14 g 1572864 n voiceUpload$o i 0 o 1
+GC m 14 g 2097152 n voiceP2P$i i 0 o 0
+GC m 14 g 2621440 n voiceP2P$o i 0 o 1
+MC id 15 c Cloud t Cloud pid 1 n Relayers
+MS id 15 d is=l;p=453,146;i=device/lan
+GC m 15 g 1048576 n voiceServer$i i 0 o 0
+GC m 15 g 1572864 n voiceServer$o i 0 o 1
+GC m 15 g 2097152 n voicePresenter$i i 0 o 0
+GC m 15 g 2621440 n voicePresenter$o i 0 o 1
+GC m 15 g 3145728 n voiceListeners$i i 0 o 0
+GC m 15 g 3670016 n voiceListeners$o i 0 o 1
+GC m 15 g 3145729 n voiceListeners$i i 1 o 0
+GC m 15 g 3670017 n voiceListeners$o i 1 o 1
+GC m 15 g 3145730 n voiceListeners$i i 2 o 0
+GC m 15 g 3670018 n voiceListeners$o i 2 o 1
+GC m 15 g 3145731 n voiceListeners$i i 3 o 0
+GC m 15 g 3670019 n voiceListeners$o i 3 o 1
+GC m 15 g 3145732 n voiceListeners$i i 4 o 0
+GC m 15 g 3670020 n voiceListeners$o i 4 o 1
+GC m 15 g 3145733 n voiceListeners$i i 5 o 0
+GC m 15 g 3670021 n voiceListeners$o i 5 o 1
+GC m 15 g 3145734 n voiceListeners$i i 6 o 0
+GC m 15 g 3670022 n voiceListeners$o i 6 o 1
+GC m 15 g 3145735 n voiceListeners$i i 7 o 0
+GC m 15 g 3670023 n voiceListeners$o i 7 o 1
+GC m 15 g 3145736 n voiceListeners$i i 8 o 0
+GC m 15 g 3670024 n voiceListeners$o i 8 o 1
+GC m 15 g 3145737 n voiceListeners$i i 9 o 0
+GC m 15 g 3670025 n voiceListeners$o i 9 o 1
+CC sm 2 sg 1572864 dm 3 dg 1048576
+CC sm 3 sg 1572864 dm 2 dg 1048576
+CC sm 4 sg 1572864 dm 3 dg 2097152
+CC sm 3 sg 2621440 dm 4 dg 1048576
+CC sm 5 sg 1572864 dm 3 dg 3145728
+CC sm 3 sg 3670016 dm 5 dg 1048576
+CC sm 6 sg 1572864 dm 3 dg 3145729
+CC sm 3 sg 3670017 dm 6 dg 1048576
+CC sm 7 sg 1572864 dm 3 dg 3145730
+CC sm 3 sg 3670018 dm 7 dg 1048576
+CC sm 8 sg 1572864 dm 3 dg 3145731
+CC sm 3 sg 3670019 dm 8 dg 1048576
+CC sm 9 sg 1572864 dm 3 dg 3145732
+CC sm 3 sg 3670020 dm 9 dg 1048576
+CC sm 10 sg 1572864 dm 3 dg 3145733
+CC sm 3 sg 3670021 dm 10 dg 1048576
+CC sm 11 sg 1572864 dm 3 dg 3145734
+CC sm 3 sg 3670022 dm 11 dg 1048576
+CC sm 12 sg 1572864 dm 3 dg 3145735
+CC sm 3 sg 3670023 dm 12 dg 1048576
+CC sm 13 sg 1572864 dm 3 dg 3145736
+CC sm 3 sg 3670024 dm 13 dg 1048576
+CC sm 14 sg 1572864 dm 3 dg 3145737
+CC sm 3 sg 3670025 dm 14 dg 1048576
+CC sm 4 sg 2621440 dm 15 dg 2097152
+CC sm 15 sg 2621440 dm 4 dg 2097152
+CC sm 15 sg 3670016 dm 5 dg 2097152
+CC sm 5 sg 2621440 dm 15 dg 3145728
+CC sm 15 sg 3670017 dm 6 dg 2097152
+CC sm 6 sg 2621440 dm 15 dg 3145729
+CC sm 15 sg 3670018 dm 7 dg 2097152
+CC sm 7 sg 2621440 dm 15 dg 3145730
+CC sm 15 sg 3670019 dm 8 dg 2097152
+CC sm 8 sg 2621440 dm 15 dg 3145731
+CC sm 15 sg 3670020 dm 9 dg 2097152
+CC sm 9 sg 2621440 dm 15 dg 3145732
+CC sm 15 sg 3670021 dm 10 dg 2097152
+CC sm 10 sg 2621440 dm 15 dg 3145733
+CC sm 15 sg 3670022 dm 11 dg 2097152
+CC sm 11 sg 2621440 dm 15 dg 3145734
+CC sm 15 sg 3670023 dm 12 dg 2097152
+CC sm 12 sg 2621440 dm 15 dg 3145735
+CC sm 15 sg 3670024 dm 13 dg 2097152
+CC sm 13 sg 2621440 dm 15 dg 3145736
+CC sm 15 sg 3670025 dm 14 dg 2097152
+CC sm 14 sg 2621440 dm 15 dg 3145737
+MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c cMessage n rtEvent pe -1
+CM id 1 tid 1 eid 1 etid 1 c cMessage n end-service pe -1
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+MB sm 1 tm 4 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c cMessage n timer pe -1
+BS id 2 tid 2 eid 2 etid 2 c cMessage n timer pe 0
+ES t 0.795874504565
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c cMessage n timer pe -1
+BS id 3 tid 3 eid 3 etid 3 c cMessage n timer pe 0
+ES t 1.347840582725
+ME
+MB sm 1 tm 6 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c cMessage n timer pe -1
+BS id 4 tid 4 eid 4 etid 4 c cMessage n timer pe 0
+ES t 1.883896137071
+ME
+MB sm 1 tm 7 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c cMessage n timer pe -1
+BS id 5 tid 5 eid 5 etid 5 c cMessage n timer pe 0
+ES t 2.789406318112
+ME
+MB sm 1 tm 8 m initialize(0)
+CM id 6 tid 6 eid 6 etid 6 c cMessage n timer pe -1
+BS id 6 tid 6 eid 6 etid 6 c cMessage n timer pe 0
+ES t 1.384834697206
+ME
+MB sm 1 tm 9 m initialize(0)
+CM id 7 tid 7 eid 7 etid 7 c cMessage n timer pe -1
+BS id 7 tid 7 eid 7 etid 7 c cMessage n timer pe 0
+ES t 2.927318003826
+ME
+MB sm 1 tm 10 m initialize(0)
+CM id 8 tid 8 eid 8 etid 8 c cMessage n timer pe -1
+BS id 8 tid 8 eid 8 etid 8 c cMessage n timer pe 0
+ES t 1.180801709972
+ME
+MB sm 1 tm 11 m initialize(0)
+CM id 9 tid 9 eid 9 etid 9 c cMessage n timer pe -1
+BS id 9 tid 9 eid 9 etid 9 c cMessage n timer pe 0
+ES t 2.818446081304
+ME
+MB sm 1 tm 12 m initialize(0)
+CM id 10 tid 10 eid 10 etid 10 c cMessage n timer pe -1
+BS id 10 tid 10 eid 10 etid 10 c cMessage n timer pe 0
+ES t 0.826572730005
+ME
+MB sm 1 tm 13 m initialize(0)
+CM id 11 tid 11 eid 11 etid 11 c cMessage n timer pe -1
+BS id 11 tid 11 eid 11 etid 11 c cMessage n timer pe 0
+ES t 1.46550963959
+ME
+MB sm 1 tm 14 m initialize(0)
+CM id 12 tid 12 eid 12 etid 12 c cMessage n timer pe -1
+BS id 12 tid 12 eid 12 etid 12 c cMessage n timer pe 0
+ES t 1.557238950995
+ME
+MB sm 1 tm 15 m initialize(0)
+ME
+
+E # 1 t 0.795874504565 m 4 ce 0 msg 2
+CM id 13 tid 13 eid 13 etid 13 c cMessage n "" pe -1
+BS id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 1
+CL id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 1 cid 14
+SH sm 4 sg 1572864
+ES t 0.795874504565
+CM id 15 tid 15 eid 15 etid 15 c cMessage n "" pe -1
+BS id 15 tid 15 eid 15 etid 15 c HTTPMsg n "" pe 1
+CL id 15 tid 15 eid 15 etid 15 c HTTPMsg n "" pe 1 cid 16
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 17 tid 17 eid 17 etid 17 c cMessage n "" pe -1
+BS id 17 tid 17 eid 17 etid 17 c HTTPMsg n "" pe 1
+CL id 17 tid 17 eid 17 etid 17 c HTTPMsg n "" pe 1 cid 18
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 19 tid 19 eid 19 etid 19 c cMessage n "" pe -1
+BS id 19 tid 19 eid 19 etid 19 c HTTPMsg n "" pe 1
+CL id 19 tid 19 eid 19 etid 19 c HTTPMsg n "" pe 1 cid 20
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 21 tid 21 eid 21 etid 21 c cMessage n "" pe -1
+BS id 21 tid 21 eid 21 etid 21 c HTTPMsg n "" pe 1
+CL id 21 tid 21 eid 21 etid 21 c HTTPMsg n "" pe 1 cid 22
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 23 tid 23 eid 23 etid 23 c cMessage n "" pe -1
+BS id 23 tid 23 eid 23 etid 23 c HTTPMsg n "" pe 1
+CL id 23 tid 23 eid 23 etid 23 c HTTPMsg n "" pe 1 cid 24
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 25 tid 25 eid 25 etid 25 c cMessage n "" pe -1
+BS id 25 tid 25 eid 25 etid 25 c HTTPMsg n "" pe 1
+CL id 25 tid 25 eid 25 etid 25 c HTTPMsg n "" pe 1 cid 26
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 27 tid 27 eid 27 etid 27 c cMessage n "" pe -1
+BS id 27 tid 27 eid 27 etid 27 c HTTPMsg n "" pe 1
+CL id 27 tid 27 eid 27 etid 27 c HTTPMsg n "" pe 1 cid 28
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 29 tid 29 eid 29 etid 29 c cMessage n "" pe -1
+BS id 29 tid 29 eid 29 etid 29 c HTTPMsg n "" pe 1
+CL id 29 tid 29 eid 29 etid 29 c HTTPMsg n "" pe 1 cid 30
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 31 tid 31 eid 31 etid 31 c cMessage n "" pe -1
+BS id 31 tid 31 eid 31 etid 31 c HTTPMsg n "" pe 1
+CL id 31 tid 31 eid 31 etid 31 c HTTPMsg n "" pe 1 cid 32
+SH sm 4 sg 2621440
+ES t 0.795874504565
+CM id 33 tid 33 eid 33 etid 33 c cMessage n "" pe -1
+BS id 33 tid 33 eid 33 etid 33 c HTTPMsg n "" pe 1
+CL id 33 tid 33 eid 33 etid 33 c HTTPMsg n "" pe 1 cid 34
+SH sm 4 sg 2621440
+ES t 0.795874504565
+BS id 2 tid 2 eid 2 etid 2 c cMessage n timer pe 1
+ES t 1.281002668286
+- Starting service of 
+
+E # 2 t 0.795874504565 m 3 ce 1 msg 13
+- Relaying packet to addr=0
+BS id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 2
+CL id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 2 cid 35
+SH sm 3 sg 1572864
+ES t 0.895874504565
+
+E # 3 t 0.795874504565 m 15 ce 1 msg 15
+- Relaying packet to addr=2
+BS id 15 tid 15 eid 15 etid 15 c HTTPMsg n "" pe 3
+CL id 15 tid 15 eid 15 etid 15 c HTTPMsg n "" pe 3 cid 36
+SH sm 15 sg 3670016
+ES t 0.995874504565
+
+E # 4 t 0.795874504565 m 15 ce 1 msg 17
+- Relaying packet to addr=3
+BS id 17 tid 17 eid 17 etid 17 c HTTPMsg n "" pe 4
+CL id 17 tid 17 eid 17 etid 17 c HTTPMsg n "" pe 4 cid 37
+SH sm 15 sg 3670017
+ES t 0.995874504565
+
+E # 5 t 0.795874504565 m 15 ce 1 msg 19
+- Relaying packet to addr=4
+BS id 19 tid 19 eid 19 etid 19 c HTTPMsg n "" pe 5
+CL id 19 tid 19 eid 19 etid 19 c HTTPMsg n "" pe 5 cid 38
+SH sm 15 sg 3670018
+ES t 0.995874504565
+
+E # 6 t 0.795874504565 m 15 ce 1 msg 21
+- Relaying packet to addr=5
+BS id 21 tid 21 eid 21 etid 21 c HTTPMsg n "" pe 6
+CL id 21 tid 21 eid 21 etid 21 c HTTPMsg n "" pe 6 cid 39
+SH sm 15 sg 3670019
+ES t 0.995874504565
+
+E # 7 t 0.795874504565 m 15 ce 1 msg 23
+- Relaying packet to addr=6
+BS id 23 tid 23 eid 23 etid 23 c HTTPMsg n "" pe 7
+CL id 23 tid 23 eid 23 etid 23 c HTTPMsg n "" pe 7 cid 40
+SH sm 15 sg 3670020
+ES t 0.995874504565
+
+E # 8 t 0.795874504565 m 15 ce 1 msg 25
+- Relaying packet to addr=7
+BS id 25 tid 25 eid 25 etid 25 c HTTPMsg n "" pe 8
+CL id 25 tid 25 eid 25 etid 25 c HTTPMsg n "" pe 8 cid 41
+SH sm 15 sg 3670021
+ES t 0.995874504565
+
+E # 9 t 0.795874504565 m 15 ce 1 msg 27
+- Relaying packet to addr=8
+BS id 27 tid 27 eid 27 etid 27 c HTTPMsg n "" pe 9
+CL id 27 tid 27 eid 27 etid 27 c HTTPMsg n "" pe 9 cid 42
+SH sm 15 sg 3670022
+ES t 0.995874504565
+
+E # 10 t 0.795874504565 m 15 ce 1 msg 29
+- Relaying packet to addr=9
+BS id 29 tid 29 eid 29 etid 29 c HTTPMsg n "" pe 10
+CL id 29 tid 29 eid 29 etid 29 c HTTPMsg n "" pe 10 cid 43
+SH sm 15 sg 3670023
+ES t 0.995874504565
+
+E # 11 t 0.795874504565 m 15 ce 1 msg 31
+- Relaying packet to addr=10
+BS id 31 tid 31 eid 31 etid 31 c HTTPMsg n "" pe 11
+CL id 31 tid 31 eid 31 etid 31 c HTTPMsg n "" pe 11 cid 44
+SH sm 15 sg 3670024
+ES t 0.995874504565
+
+E # 12 t 0.795874504565 m 15 ce 1 msg 33
+- Relaying packet to addr=11
+BS id 33 tid 33 eid 33 etid 33 c HTTPMsg n "" pe 12
+CL id 33 tid 33 eid 33 etid 33 c HTTPMsg n "" pe 12 cid 45
+SH sm 15 sg 3670025
+ES t 0.995874504565
+
+E # 13 t 0.826572730005 m 12 ce 0 msg 10
+CM id 46 tid 46 eid 46 etid 46 c cMessage n "" pe -1
+BS id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 13
+CL id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 13 cid 47
+SH sm 12 sg 1572864
+ES t 0.826572730005
+BS id 10 tid 10 eid 10 etid 10 c cMessage n timer pe 13
+ES t 1.689851525329
+- Starting service of 
+
+E # 14 t 0.826572730005 m 3 ce 13 msg 46
+- Relaying packet to addr=0
+BS id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 14
+CL id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 14 cid 48
+SH sm 3 sg 1572864
+ES t 0.926572730005
+
+E # 15 t 0.895874504565 m 2 ce 2 msg 13
+- Starting service of 
+BS id 1 tid 1 eid 1 etid 1 c cMessage n end-service pe 0
+ES t 0.995874504565
+
+E # 16 t 0.926572730005 m 2 ce 14 msg 46
+
+E # 17 t 0.995874504565 m 5 ce 3 msg 15
+DM id 15 tid 15 eid 15 etid 15 c cMessage n "" pe 17
+
+E # 18 t 0.995874504565 m 6 ce 4 msg 17
+DM id 17 tid 17 eid 17 etid 17 c cMessage n "" pe 18
+
+E # 19 t 0.995874504565 m 7 ce 5 msg 19
+DM id 19 tid 19 eid 19 etid 19 c cMessage n "" pe 19
+
+E # 20 t 0.995874504565 m 8 ce 6 msg 21
+DM id 21 tid 21 eid 21 etid 21 c cMessage n "" pe 20
+
+E # 21 t 0.995874504565 m 9 ce 7 msg 23
+DM id 23 tid 23 eid 23 etid 23 c cMessage n "" pe 21
+
+E # 22 t 0.995874504565 m 10 ce 8 msg 25
+DM id 25 tid 25 eid 25 etid 25 c cMessage n "" pe 22
+
+E # 23 t 0.995874504565 m 11 ce 9 msg 27
+DM id 27 tid 27 eid 27 etid 27 c cMessage n "" pe 23
+
+E # 24 t 0.995874504565 m 12 ce 10 msg 29
+DM id 29 tid 29 eid 29 etid 29 c cMessage n "" pe 24
+
+E # 25 t 0.995874504565 m 13 ce 11 msg 31
+DM id 31 tid 31 eid 31 etid 31 c cMessage n "" pe 25
+
+E # 26 t 0.995874504565 m 14 ce 12 msg 33
+DM id 33 tid 33 eid 33 etid 33 c cMessage n "" pe 26
+
+E # 27 t 0.995874504565 m 2 ce 15 msg 1
+- Completed service of 
+- Received: POST / HTTP/1.1
+BS id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 15
+CL id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 15 cid 49
+SH sm 2 sg 1572864
+ES t 0.995874504565
+- Starting service of 
+BS id 1 tid 1 eid 1 etid 1 c cMessage n end-service pe 27
+ES t 1.095874504565
+
+E # 28 t 0.995874504565 m 3 ce 27 msg 13
+- Relaying packet to addr=1
+BS id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 28
+CL id 13 tid 13 eid 13 etid 13 c HTTPMsg n "" pe 28 cid 50
+SH sm 3 sg 2621440
+ES t 1.095874504565
+
+E # 29 t 1.095874504565 m 2 ce 27 msg 1
+- Completed service of 
+- Received: GET / HTTP/1.0
+- URI=/ ---> <html>
+- <style type="text/css">
+- h1,h2,h3,h4,p,table,ul,ol {font-family: Geneva, Arial, Helvetica, sans-serif;}
+- pre { margin-left:8pt; background:#fffff4; padding:5pt; border:1px solid; border-color:#a0a0a0 }
+- </style>
+- 
+- <body>
+- <h3>The Sockets Demo</h3>
+- 
+- <p>
+- This is an example how one can implement hardware-in-the-loop simulation
+- with OMNeT++/OMNEST. Hardware-in-the-loop means that some external device
+- is taking part in the simulation, or in other scenarios, the simulation
+- program emulates a device which is part of the real system. In this example
+- simulation, it will be an external process (a web browser or
+- a telnet client) that participates in the simulation.
+- 
+- <p>
+- This example contains two simulation models:
+- 
+- <ul>
+-   <li>The <a href="httpmodel.html">HTTP</a> model (the one you're currently
+-       running)
+-   <li>The <a href="telnetmodel.html">Telnet</a> model
+- </ul>
+- 
+- <p>
+- Both simulations are executed in <a href="realtime.html">real-time</a>,
+- that is, simulation time is synchronized to real (wall clock) time.
+- Also, you can connect into the simulation with the web browser or
+- the telnet program, and generate traffic on the simulated network.
+- Read more about the principle <a href="hwintheloop.html">here</a>.
+- 
+- <p>
+- It is recommended that you set animation speed to near maximum (using the
+- slider at the top of the graphics window) for the simulation to be able
+- to keep up with real time. Then you can check on the performance gauge bar:
+- the simsec/sec gauge should stay around 1.0.
+- 
+- <p>
+- This example simulation is just a toy, but it's not difficult to see
+- how one could change it into something useful. For example, if one
+- changes the TCP socket interface to grabbing and sending raw Ethernet
+- frames, a simulation can be made to receive and generate traffic
+- on the local network. It is essential though that the computer running
+- the simulation has enough processing power to keep up with real time,
+- and communication latencies at the external interface be small enough
+- and properly accounted for in the model.
+- 
+- <p>
+- At the heart of this simulation is the <tt>cSocketRTScheduler</tt> class,
+- which OMNeT++/OMNEST was <a href="config.html">configured</a> to use
+- as scheduler. The "external client" simple modules (<tt>ExtHTTPClient</tt>,
+- <tt>ExtTelnetClient</tt>) then rely on <tt>cSocketRTScheduler</tt>
+- for keeping in touch with the external process (browser or telnet).
+- Read about the <a href="implementation.html">implementation</a>.
+- 
+- </body>
+- </html>
+- 
+BS id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 16
+CL id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 16 cid 51
+SH sm 2 sg 1572864
+ES t 1.095874504565
+
+E # 30 t 1.095874504565 m 4 ce 28 msg 13
+DM id 13 tid 13 eid 13 etid 13 c cMessage n "" pe 30
+
+E # 31 t 1.095874504565 m 3 ce 29 msg 46
+- Relaying packet to addr=9
+BS id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 31
+CL id 46 tid 46 eid 46 etid 46 c HTTPMsg n "" pe 31 cid 52
+SH sm 3 sg 3670023
+ES t 1.195874504565
+
+E # 32 t 1.180801709972 m 10 ce 0 msg 8
+CM id 53 tid 53 eid 53 etid 53 c cMessage n "" pe -1
+BS id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 32
+CL id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 32 cid 54
+SH sm 10 sg 1572864
+ES t 1.180801709972
+BS id 8 tid 8 eid 8 etid 8 c cMessage n timer pe 32
+ES t 1.710540418678
+- Starting service of 
+
+E # 33 t 1.180801709972 m 3 ce 32 msg 53
+- Relaying packet to addr=0
+BS id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 33
+CL id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 33 cid 55
+SH sm 3 sg 1572864
+ES t 1.280801709972
+
+E # 34 t 1.195874504565 m 12 ce 31 msg 46
+DM id 46 tid 46 eid 46 etid 46 c cMessage n "" pe 34
+
+E # 35 t 1.280801709972 m 2 ce 33 msg 53
+- Starting service of 
+BS id 1 tid 1 eid 1 etid 1 c cMessage n end-service pe 29
+ES t 1.380801709972
+
+E # 36 t 1.281002668286 m 4 ce 1 msg 2
+CM id 56 tid 56 eid 56 etid 56 c cMessage n "" pe -1
+BS id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 36
+CL id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 36 cid 57
+SH sm 4 sg 1572864
+ES t 1.281002668286
+CM id 58 tid 58 eid 58 etid 58 c cMessage n "" pe -1
+BS id 58 tid 58 eid 58 etid 58 c HTTPMsg n "" pe 36
+CL id 58 tid 58 eid 58 etid 58 c HTTPMsg n "" pe 36 cid 59
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 60 tid 60 eid 60 etid 60 c cMessage n "" pe -1
+BS id 60 tid 60 eid 60 etid 60 c HTTPMsg n "" pe 36
+CL id 60 tid 60 eid 60 etid 60 c HTTPMsg n "" pe 36 cid 61
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 62 tid 62 eid 62 etid 62 c cMessage n "" pe -1
+BS id 62 tid 62 eid 62 etid 62 c HTTPMsg n "" pe 36
+CL id 62 tid 62 eid 62 etid 62 c HTTPMsg n "" pe 36 cid 63
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 64 tid 64 eid 64 etid 64 c cMessage n "" pe -1
+BS id 64 tid 64 eid 64 etid 64 c HTTPMsg n "" pe 36
+CL id 64 tid 64 eid 64 etid 64 c HTTPMsg n "" pe 36 cid 65
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 66 tid 66 eid 66 etid 66 c cMessage n "" pe -1
+BS id 66 tid 66 eid 66 etid 66 c HTTPMsg n "" pe 36
+CL id 66 tid 66 eid 66 etid 66 c HTTPMsg n "" pe 36 cid 67
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 68 tid 68 eid 68 etid 68 c cMessage n "" pe -1
+BS id 68 tid 68 eid 68 etid 68 c HTTPMsg n "" pe 36
+CL id 68 tid 68 eid 68 etid 68 c HTTPMsg n "" pe 36 cid 69
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 70 tid 70 eid 70 etid 70 c cMessage n "" pe -1
+BS id 70 tid 70 eid 70 etid 70 c HTTPMsg n "" pe 36
+CL id 70 tid 70 eid 70 etid 70 c HTTPMsg n "" pe 36 cid 71
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 72 tid 72 eid 72 etid 72 c cMessage n "" pe -1
+BS id 72 tid 72 eid 72 etid 72 c HTTPMsg n "" pe 36
+CL id 72 tid 72 eid 72 etid 72 c HTTPMsg n "" pe 36 cid 73
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 74 tid 74 eid 74 etid 74 c cMessage n "" pe -1
+BS id 74 tid 74 eid 74 etid 74 c HTTPMsg n "" pe 36
+CL id 74 tid 74 eid 74 etid 74 c HTTPMsg n "" pe 36 cid 75
+SH sm 4 sg 2621440
+ES t 1.281002668286
+CM id 76 tid 76 eid 76 etid 76 c cMessage n "" pe -1
+BS id 76 tid 76 eid 76 etid 76 c HTTPMsg n "" pe 36
+CL id 76 tid 76 eid 76 etid 76 c HTTPMsg n "" pe 36 cid 77
+SH sm 4 sg 2621440
+ES t 1.281002668286
+BS id 2 tid 2 eid 2 etid 2 c cMessage n timer pe 36
+ES t 3.504527090322
+- Starting service of 
+
+E # 37 t 1.281002668286 m 3 ce 36 msg 56
+- Relaying packet to addr=0
+BS id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 37
+CL id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 37 cid 78
+SH sm 3 sg 1572864
+ES t 1.381002668286
+
+E # 38 t 1.281002668286 m 15 ce 36 msg 58
+- Relaying packet to addr=2
+BS id 58 tid 58 eid 58 etid 58 c HTTPMsg n "" pe 38
+CL id 58 tid 58 eid 58 etid 58 c HTTPMsg n "" pe 38 cid 79
+SH sm 15 sg 3670016
+ES t 1.481002668286
+
+E # 39 t 1.281002668286 m 15 ce 36 msg 60
+- Relaying packet to addr=3
+BS id 60 tid 60 eid 60 etid 60 c HTTPMsg n "" pe 39
+CL id 60 tid 60 eid 60 etid 60 c HTTPMsg n "" pe 39 cid 80
+SH sm 15 sg 3670017
+ES t 1.481002668286
+
+E # 40 t 1.281002668286 m 15 ce 36 msg 62
+- Relaying packet to addr=4
+BS id 62 tid 62 eid 62 etid 62 c HTTPMsg n "" pe 40
+CL id 62 tid 62 eid 62 etid 62 c HTTPMsg n "" pe 40 cid 81
+SH sm 15 sg 3670018
+ES t 1.481002668286
+
+E # 41 t 1.281002668286 m 15 ce 36 msg 64
+- Relaying packet to addr=5
+BS id 64 tid 64 eid 64 etid 64 c HTTPMsg n "" pe 41
+CL id 64 tid 64 eid 64 etid 64 c HTTPMsg n "" pe 41 cid 82
+SH sm 15 sg 3670019
+ES t 1.481002668286
+
+E # 42 t 1.281002668286 m 15 ce 36 msg 66
+- Relaying packet to addr=6
+BS id 66 tid 66 eid 66 etid 66 c HTTPMsg n "" pe 42
+CL id 66 tid 66 eid 66 etid 66 c HTTPMsg n "" pe 42 cid 83
+SH sm 15 sg 3670020
+ES t 1.481002668286
+
+E # 43 t 1.281002668286 m 15 ce 36 msg 68
+- Relaying packet to addr=7
+BS id 68 tid 68 eid 68 etid 68 c HTTPMsg n "" pe 43
+CL id 68 tid 68 eid 68 etid 68 c HTTPMsg n "" pe 43 cid 84
+SH sm 15 sg 3670021
+ES t 1.481002668286
+
+E # 44 t 1.281002668286 m 15 ce 36 msg 70
+- Relaying packet to addr=8
+BS id 70 tid 70 eid 70 etid 70 c HTTPMsg n "" pe 44
+CL id 70 tid 70 eid 70 etid 70 c HTTPMsg n "" pe 44 cid 85
+SH sm 15 sg 3670022
+ES t 1.481002668286
+
+E # 45 t 1.281002668286 m 15 ce 36 msg 72
+- Relaying packet to addr=9
+BS id 72 tid 72 eid 72 etid 72 c HTTPMsg n "" pe 45
+CL id 72 tid 72 eid 72 etid 72 c HTTPMsg n "" pe 45 cid 86
+SH sm 15 sg 3670023
+ES t 1.481002668286
+
+E # 46 t 1.281002668286 m 15 ce 36 msg 74
+- Relaying packet to addr=10
+BS id 74 tid 74 eid 74 etid 74 c HTTPMsg n "" pe 46
+CL id 74 tid 74 eid 74 etid 74 c HTTPMsg n "" pe 46 cid 87
+SH sm 15 sg 3670024
+ES t 1.481002668286
+
+E # 47 t 1.281002668286 m 15 ce 36 msg 76
+- Relaying packet to addr=11
+BS id 76 tid 76 eid 76 etid 76 c HTTPMsg n "" pe 47
+CL id 76 tid 76 eid 76 etid 76 c HTTPMsg n "" pe 47 cid 88
+SH sm 15 sg 3670025
+ES t 1.481002668286
+
+E # 48 t 1.347840582725 m 5 ce 0 msg 3
+CM id 89 tid 89 eid 89 etid 89 c cMessage n "" pe -1
+BS id 89 tid 89 eid 89 etid 89 c HTTPMsg n "" pe 48
+CL id 89 tid 89 eid 89 etid 89 c HTTPMsg n "" pe 48 cid 90
+SH sm 5 sg 1572864
+ES t 1.347840582725
+BS id 3 tid 3 eid 3 etid 3 c cMessage n timer pe 48
+ES t 1.435417586364
+- Starting service of 
+
+E # 49 t 1.347840582725 m 3 ce 48 msg 89
+- Relaying packet to addr=0
+BS id 89 tid 89 eid 89 etid 89 c HTTPMsg n "" pe 49
+CL id 89 tid 89 eid 89 etid 89 c HTTPMsg n "" pe 49 cid 91
+SH sm 3 sg 1572864
+ES t 1.447840582725
+
+E # 50 t 1.380801709972 m 2 ce 35 msg 1
+- Completed service of 
+- Received: GET / HTTP/1.0
+BS id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 35
+CL id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 35 cid 92
+SH sm 2 sg 1572864
+ES t 1.380801709972
+
+E # 51 t 1.380801709972 m 3 ce 50 msg 53
+- Relaying packet to addr=7
+BS id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 51
+CL id 53 tid 53 eid 53 etid 53 c HTTPMsg n "" pe 51 cid 93
+SH sm 3 sg 3670021
+ES t 1.480801709972
+
+E # 52 t 1.381002668286 m 2 ce 37 msg 56
+- Starting service of 
+BS id 1 tid 1 eid 1 etid 1 c cMessage n end-service pe 50
+ES t 1.481002668286
+
+E # 53 t 1.384834697206 m 8 ce 0 msg 6
+CM id 94 tid 94 eid 94 etid 94 c cMessage n "" pe -1
+BS id 94 tid 94 eid 94 etid 94 c HTTPMsg n "" pe 53
+CL id 94 tid 94 eid 94 etid 94 c HTTPMsg n "" pe 53 cid 95
+SH sm 8 sg 1572864
+ES t 1.384834697206
+BS id 6 tid 6 eid 6 etid 6 c cMessage n timer pe 53
+ES t 6.357203117098
+- Starting service of 
+
+E # 54 t 1.384834697206 m 3 ce 53 msg 94
+- Relaying packet to addr=0
+BS id 94 tid 94 eid 94 etid 94 c HTTPMsg n "" pe 54
+CL id 94 tid 94 eid 94 etid 94 c HTTPMsg n "" pe 54 cid 96
+SH sm 3 sg 1572864
+ES t 1.484834697206
+
+E # 55 t 1.435417586364 m 5 ce 48 msg 3
+CM id 97 tid 97 eid 97 etid 97 c cMessage n "" pe -1
+BS id 97 tid 97 eid 97 etid 97 c HTTPMsg n "" pe 55
+CL id 97 tid 97 eid 97 etid 97 c HTTPMsg n "" pe 55 cid 98
+SH sm 5 sg 1572864
+ES t 1.435417586364
+BS id 3 tid 3 eid 3 etid 3 c cMessage n timer pe 55
+ES t 1.912951797626
+- Starting service of 
+
+E # 56 t 1.435417586364 m 3 ce 55 msg 97
+- Relaying packet to addr=0
+BS id 97 tid 97 eid 97 etid 97 c HTTPMsg n "" pe 56
+CL id 97 tid 97 eid 97 etid 97 c HTTPMsg n "" pe 56 cid 99
+SH sm 3 sg 1572864
+ES t 1.535417586364
+
+E # 57 t 1.447840582725 m 2 ce 49 msg 89
+
+E # 58 t 1.46550963959 m 13 ce 0 msg 11
+CM id 100 tid 100 eid 100 etid 100 c cMessage n "" pe -1
+BS id 100 tid 100 eid 100 etid 100 c HTTPMsg n "" pe 58
+CL id 100 tid 100 eid 100 etid 100 c HTTPMsg n "" pe 58 cid 101
+SH sm 13 sg 1572864
+ES t 1.46550963959
+BS id 11 tid 11 eid 11 etid 11 c cMessage n timer pe 58
+ES t 2.190912797012
+- Starting service of 
+
+E # 59 t 1.46550963959 m 3 ce 58 msg 100
+- Relaying packet to addr=0
+BS id 100 tid 100 eid 100 etid 100 c HTTPMsg n "" pe 59
+CL id 100 tid 100 eid 100 etid 100 c HTTPMsg n "" pe 59 cid 102
+SH sm 3 sg 1572864
+ES t 1.56550963959
+
+E # 60 t 1.480801709972 m 10 ce 51 msg 53
+DM id 53 tid 53 eid 53 etid 53 c cMessage n "" pe 60
+
+E # 61 t 1.481002668286 m 5 ce 38 msg 58
+DM id 58 tid 58 eid 58 etid 58 c cMessage n "" pe 61
+
+E # 62 t 1.481002668286 m 6 ce 39 msg 60
+DM id 60 tid 60 eid 60 etid 60 c cMessage n "" pe 62
+
+E # 63 t 1.481002668286 m 7 ce 40 msg 62
+DM id 62 tid 62 eid 62 etid 62 c cMessage n "" pe 63
+
+E # 64 t 1.481002668286 m 8 ce 41 msg 64
+DM id 64 tid 64 eid 64 etid 64 c cMessage n "" pe 64
+
+E # 65 t 1.481002668286 m 9 ce 42 msg 66
+DM id 66 tid 66 eid 66 etid 66 c cMessage n "" pe 65
+
+E # 66 t 1.481002668286 m 10 ce 43 msg 68
+DM id 68 tid 68 eid 68 etid 68 c cMessage n "" pe 66
+
+E # 67 t 1.481002668286 m 11 ce 44 msg 70
+DM id 70 tid 70 eid 70 etid 70 c cMessage n "" pe 67
+
+E # 68 t 1.481002668286 m 12 ce 45 msg 72
+DM id 72 tid 72 eid 72 etid 72 c cMessage n "" pe 68
+
+E # 69 t 1.481002668286 m 13 ce 46 msg 74
+DM id 74 tid 74 eid 74 etid 74 c cMessage n "" pe 69
+
+E # 70 t 1.481002668286 m 14 ce 47 msg 76
+DM id 76 tid 76 eid 76 etid 76 c cMessage n "" pe 70
+
+E # 71 t 1.481002668286 m 2 ce 52 msg 1
+- Completed service of 
+- Received: POST / HTTP/1.1
+BS id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 52
+CL id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 52 cid 103
+SH sm 2 sg 1572864
+ES t 1.481002668286
+- Starting service of 
+BS id 1 tid 1 eid 1 etid 1 c cMessage n end-service pe 71
+ES t 1.581002668286
+
+E # 72 t 1.481002668286 m 3 ce 71 msg 56
+- Relaying packet to addr=1
+BS id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 72
+CL id 56 tid 56 eid 56 etid 56 c HTTPMsg n "" pe 72 cid 104
+SH sm 3 sg 2621440
+ES t 1.581002668286
+SE e 0 c 9 m "The user has finished the simulation at event #73, t=1.481002668286."

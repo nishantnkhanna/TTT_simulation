@@ -1,0 +1,1 @@
+-O2 -DNDEBUG=1   -I/usr/include -fno-stack-protector  -DHAVE_PCAP -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER -DAUTOIMPORT_NAMESPACE -I. -Ihtdocs -IE:/omnetpp-4.6/include
