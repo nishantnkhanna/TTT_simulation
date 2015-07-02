@@ -29,8 +29,9 @@ class HTTPClient : public cSimpleModule
     void sendHTTPRequest();
     void sendHTTPRequestPost();
     //void sendHTTPRequestToPeer();
-    void sendHTTPResponseToPeer();
+// void sendHTTPResponseToPeer();
     void processHTTPReply(HTTPMsg *httpMsg);
+    virtual HTTPMsg  *generateMessage();
 };
 
 Define_Module(HTTPClient);
@@ -66,7 +67,6 @@ void HTTPClient::handleMessage(cMessage *msg)
         processHTTPReply(check_and_cast<HTTPMsg *>(msg));
     }
 }
-
 void HTTPClient::sendHTTPRequest()
 {
     const char *header = "GET / HTTP/1.0\r\n\r\n";
@@ -120,33 +120,51 @@ void HTTPClient::sendHTTPRequestPost()
         send(httpMsg,"voiceP2P$o",0);
     }
 }
+/*
 
-void sendHTTPResponseToPeer()
+void  HTTPClient:: sendHTTPResponseToPeer(cMessage *msg)
 {
-
-    const char *header =  "POST / HTTP/1.1\r\n\r\n";
+       const char *header =  "POST / HTTP/1.1\r\n\r\n";
        // assemble and send HTTP request
-       HTTPMsg *httpMsg = new HTTPMsg();
-       httpMsg->setPayload(header);
-       httpMsg->setDestAddress(srvAddr);
-       httpMsg->setSrcAddress(addr);
-       int dest = httpMsg->getDestAddress();
-       if (dest >= 2){
-            //detect if the request received from peer node, peer node address greater than 2
-
+       //HTTPMsg *httpMsg = new HTTPMsg();
+       //httpMsg->setPayload(header);
+      // //httpMsg->setDestAddress(srvAddr);
+      // httpMsg->setSrcAddress(addr);
+      // int dest = httpMsg->getDestAddress();
+      NetPkt *pkt = check_and_cast<NetPkt *>(msg);
+      int dest = pkt->getDestAddress();
+       EV << "send packet packet to peer addr=" << dest << endl;
+       if (dest >= 2)
+       {
+      //detect if the request received from peer node, peer node address greater than 2
       // for (int i=0; i<clientsCount; i++) {
-
-           //HTTPMsg *httpMsg = new HTTPMsg();
-         //  httpMsg->setPayload(header);
+           HTTPMsg *httpMsg = new HTTPMsg();
+           httpMsg->setPayload(header);
            httpMsg->setSrcAddress(addr);
-           httpMsg->setDestAddress(2+i);
+           httpMsg->setDestAddress(dest);
            send(httpMsg,"voiceP2P$o",0);
-
         }
 
 
    }
+*/
+HTTPMsg *HTTPClient::generateMessage()
+{
+  // Produce source and destination addresses.
+  int src = getIndex();
+  int n = size();
+  int dest = intuniform(0,n-2);
+  if (dest>=src) dest++;
 
+  char msgname[20];
+  sprintf(msgname, "tic-%d-to-%d", src, dest);
+
+  // Create message object and set source and destination field.
+  HTTPMsg *httpmsg = new HTTPMsg(msgname);
+  httpmsg->setSrcAddress(src);
+  httpmsg->setDestAddress(dest);
+  return httpmsg;
+}
 
 
 
