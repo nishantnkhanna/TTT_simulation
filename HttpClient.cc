@@ -30,7 +30,7 @@ class HTTPClient : public cSimpleModule
     void sendHTTPRequestPost();
     //v isendHTTPRequestToPeer();
 
-// void sendHTTPResponseToPeer();
+    void sendHTTPResponseToPeer(HTTPMsg *httpMsg);
     void processHTTPReply(HTTPMsg *httpMsg);
   public :
     virtual HTTPMsg  *generateMessage();
@@ -67,6 +67,8 @@ void HTTPClient::handleMessage(cMessage *msg)
     }
     else
     {
+
+        forwardMessage(check_and_cast<HTTPMsg *>(msg));
         processHTTPReply(check_and_cast<HTTPMsg *>(msg));
     }
 }
@@ -124,27 +126,27 @@ void HTTPClient::sendHTTPRequestPost()
     }
 }
 
-void  HTTPClient:: sendHTTPResponseToPeer(cMessage *msg)
+void  HTTPClient:: sendHTTPResponseToPeer(HTTPMsg *httpmsg)
 {
-       const char *header =  "POST / HTTP/1.1\r\n\r\n";
+      // const char *header =  "POST / HTTP/1.1\r\n\r\n";
        // assemble and send HTTP request
        //HTTPMsg *httpMsg = new HTTPMsg();
        //httpMsg->setPayload(header);
       // //httpMsg->setDestAddress(srvAddr);
       // httpMsg->setSrcAddress(addr);
       // int dest = httpMsg->getDestAddress();
-      NetPkt *pkt = check_and_cast<NetPkt *>(msg);
-      int dest = pkt->getDestAddress();
+    HTTPMsg *msg = generateMessage();
+      int dest = msg->getDestAddress();
        EV << "send packet packet to peer addr=" << dest << endl;
-       if (dest >= 2)
+       if (dest >= 2 and  dest< clientsCount+2 )
        {
       //detect if the request received from peer node, peer node address greater than 2
       // for (int i=0; i<clientsCount; i++) {
-           HTTPMsg *httpMsg = new HTTPMsg();
-           httpMsg->setPayload(header);
-           httpMsg->setSrcAddress(addr);
-           httpMsg->setDestAddress(dest);
-           send(httpMsg,"voiceP2P$o",0);
+          // HTTPMsg *httpMsg = new HTTPMsg();
+         //  httpMsg->setPayload(header);
+         ////  httpMsg->setSrcAddress(addr);
+         //  httpMsg->setDestAddress(dest);
+           send(msg,"voiceP2P$o",0);
         }
 
 
@@ -153,16 +155,19 @@ void  HTTPClient:: sendHTTPResponseToPeer(cMessage *msg)
 HTTPMsg *HTTPClient::generateMessage()
 {
   // Produce source and destination addresses.
+  const char *header =  "POST / HTTP/1.1\r\n\r\n";
   int src = getIndex();
-  int n = size();
-  int dest = intuniform(0,n-2);
+ //int n = size();
+  int n  = clientsCount;
+  int dest = intuniform(0,n+2);
   if (dest>=src) dest++;
 
   char msgname[20];
-  sprintf(msgname, "tic-%d-to-%d", src, dest);
+  sprintf(msgname, "TTT-%d-to-%d", src, dest);
 
   // Create message object and set source and destination field.
-  HTTPMsg *httpmsg = new HTTPMsg(msgname);
+  HTTPMsg *httpmsg = new HTTPMsg();
+  httpmsg->setPayload(header);
   httpmsg->setSrcAddress(src);
   httpmsg->setDestAddress(dest);
   return httpmsg;
@@ -170,12 +175,16 @@ HTTPMsg *HTTPClient::generateMessage()
 
 void HTTPClient::forwardMessage(HTTPMsg *httpmsg)
 {
-
+    sendHTTPResponseToPeer(httpmsg);
 }
 
 
 void HTTPClient::processHTTPReply(HTTPMsg *httpMsg)
 {
+
+    //HTTPMsg  httpMsg =  check_and_cast<HTTPMsg *>(httpMsg);
+    int dest = httpMsg->getDestAddress();
+    EV << "delete packet packet from addr=" << dest << endl;
     delete httpMsg;
 }
 
