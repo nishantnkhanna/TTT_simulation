@@ -28,10 +28,13 @@ class HTTPClient : public cSimpleModule
     virtual void handleMessage(cMessage *msg);
     void sendHTTPRequest();
     void sendHTTPRequestPost();
-    //void sendHTTPRequestToPeer();
+    //v isendHTTPRequestToPeer();
+
 // void sendHTTPResponseToPeer();
     void processHTTPReply(HTTPMsg *httpMsg);
+  public :
     virtual HTTPMsg  *generateMessage();
+    virtual void forwardMessage(HTTPMsg *httpmsg);
 };
 
 Define_Module(HTTPClient);
@@ -120,7 +123,6 @@ void HTTPClient::sendHTTPRequestPost()
         send(httpMsg,"voiceP2P$o",0);
     }
 }
-/*
 
 void  HTTPClient:: sendHTTPResponseToPeer(cMessage *msg)
 {
@@ -147,7 +149,7 @@ void  HTTPClient:: sendHTTPResponseToPeer(cMessage *msg)
 
 
    }
-*/
+
 HTTPMsg *HTTPClient::generateMessage()
 {
   // Produce source and destination addresses.
@@ -166,6 +168,10 @@ HTTPMsg *HTTPClient::generateMessage()
   return httpmsg;
 }
 
+void HTTPClient::forwardMessage(HTTPMsg *httpmsg)
+{
+
+}
 
 
 void HTTPClient::processHTTPReply(HTTPMsg *httpMsg)
